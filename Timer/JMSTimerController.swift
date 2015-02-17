@@ -19,31 +19,30 @@ class MenuHandler : NSObject {
     }
 }
 
+class TimerView {
+}
+
 class JMSTimerController {
     let statusBar : NSStatusBar
     let statusItem : NSStatusItem
     let menu : NSMenu
-    let timerMenuItem : NSMenuItem
-    let quitMenuItem : NSMenuItem
     let menuHandler = MenuHandler()
+    let view : JMSTimerView
+    let menuItem : NSMenuItem
     
     init() {
         statusBar = NSStatusBar.systemStatusBar()
         statusItem = statusBar.statusItemWithLength(-2)
         menu = NSMenu(title: "HIMMEH")
-        timerMenuItem = NSMenuItem(title: "JIMMEH", action: Selector("viewTimer:"), keyEquivalent: "")
-        timerMenuItem.target = menuHandler
-        quitMenuItem = NSMenuItem(title: "Quit", action: Selector("quitApplication:"), keyEquivalent: "Q")
-        quitMenuItem.target = menuHandler
+        menuItem = NSMenuItem()
+        view = JMSTimerView()
 
         statusItem.title = "🕘"
         statusItem.highlightMode = true
         statusItem.menu = menu
         menu.autoenablesItems = false
-        menu.addItem(timerMenuItem)
-        menu.addItem(quitMenuItem)
-        
-        timerMenuItem.enabled = true
-        quitMenuItem.enabled = true
+        menu.addItem(menuItem)
+        menuItem.view = view
+        menuItem.enabled = true
     }
 }
