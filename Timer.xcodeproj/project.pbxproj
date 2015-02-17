@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D80D912E1A92D1A400EAA92E /* JMSTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D912D1A92D1A400EAA92E /* JMSTimer.swift */; };
+		D80D91301A92D45F00EAA92E /* JMSNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D912F1A92D45F00EAA92E /* JMSNotifier.swift */; };
 		D836909C1A92CFEC00785E32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836909B1A92CFEC00785E32 /* AppDelegate.swift */; };
-		D836909E1A92CFEC00785E32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836909D1A92CFEC00785E32 /* ViewController.swift */; };
 		D83690A01A92CFEC00785E32 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D836909F1A92CFEC00785E32 /* Images.xcassets */; };
 		D83690A31A92CFEC00785E32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D83690A11A92CFEC00785E32 /* Main.storyboard */; };
 		D83690AF1A92CFEC00785E32 /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83690AE1A92CFEC00785E32 /* TimerTests.swift */; };
+		D8F72CD71A930F30000A6187 /* JMSTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F72CD61A930F30000A6187 /* JMSTimerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,15 +27,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D80D912D1A92D1A400EAA92E /* JMSTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMSTimer.swift; sourceTree = "<group>"; };
+		D80D912F1A92D45F00EAA92E /* JMSNotifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMSNotifier.swift; sourceTree = "<group>"; };
 		D83690961A92CFEC00785E32 /* Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D836909A1A92CFEC00785E32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D836909B1A92CFEC00785E32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D836909D1A92CFEC00785E32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D836909F1A92CFEC00785E32 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D83690A21A92CFEC00785E32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D83690A81A92CFEC00785E32 /* TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D83690AD1A92CFEC00785E32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D83690AE1A92CFEC00785E32 /* TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
+		D8F72CD61A930F30000A6187 /* JMSTimerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMSTimerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				D836909B1A92CFEC00785E32 /* AppDelegate.swift */,
-				D836909D1A92CFEC00785E32 /* ViewController.swift */,
+				D8F72CD61A930F30000A6187 /* JMSTimerController.swift */,
+				D80D912D1A92D1A400EAA92E /* JMSTimer.swift */,
+				D80D912F1A92D45F00EAA92E /* JMSNotifier.swift */,
 				D836909F1A92CFEC00785E32 /* Images.xcassets */,
 				D83690A11A92CFEC00785E32 /* Main.storyboard */,
 				D83690991A92CFEC00785E32 /* Supporting Files */,
@@ -208,8 +214,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D836909E1A92CFEC00785E32 /* ViewController.swift in Sources */,
 				D836909C1A92CFEC00785E32 /* AppDelegate.swift in Sources */,
+				D80D91301A92D45F00EAA92E /* JMSNotifier.swift in Sources */,
+				D8F72CD71A930F30000A6187 /* JMSTimerController.swift in Sources */,
+				D80D912E1A92D1A400EAA92E /* JMSTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +337,7 @@
 				INFOPLIST_FILE = Timer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Debug;
 		};
@@ -398,6 +407,7 @@
 				D83690B41A92CFEC00785E32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D83690B51A92CFEC00785E32 /* Build configuration list for PBXNativeTarget "TimerTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +416,7 @@
 				D83690B71A92CFEC00785E32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
