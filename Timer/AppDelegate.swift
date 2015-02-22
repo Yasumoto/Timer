@@ -11,18 +11,11 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    let notifier : JMSNotifier
-    let timer : JMSTimer
+
     let controller : JMSTimerController
 
     override init() {
-        notifier = JMSNotifier()
-        timer = JMSTimer(executingFunction: notifier.sendNotification)
         self.controller = JMSTimerController()
         super.init()
-    }
-
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        timer.start(1.0)
     }
 }

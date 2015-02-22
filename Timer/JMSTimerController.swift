@@ -9,16 +9,6 @@
 import AppKit
 import Foundation
 
-class MenuHandler : NSObject {
-    func viewTimer (sender: NSMenuItem) {
-        println("Clicked!")
-    }
-    
-    func quitApplication(sender: NSMenuItem) {
-        exit(0)
-    }
-}
-
 class TimerView {
 }
 
@@ -26,8 +16,7 @@ class JMSTimerController {
     let statusBar : NSStatusBar
     let statusItem : NSStatusItem
     let menu : NSMenu
-    let menuHandler = MenuHandler()
-    let view : JMSTimerView
+    let viewController : JMSTimerViewController
     let menuItem : NSMenuItem
     
     init() {
@@ -35,14 +24,14 @@ class JMSTimerController {
         statusItem = statusBar.statusItemWithLength(-2)
         menu = NSMenu(title: "HIMMEH")
         menuItem = NSMenuItem()
-        view = JMSTimerView()
+        viewController = JMSTimerViewController(nibName: "JMSTimerViewController", bundle: nil)!
 
         statusItem.title = "🕘"
         statusItem.highlightMode = true
         statusItem.menu = menu
         menu.autoenablesItems = false
         menu.addItem(menuItem)
-        menuItem.view = view
+        menuItem.view = viewController.view
         menuItem.enabled = true
     }
 }
